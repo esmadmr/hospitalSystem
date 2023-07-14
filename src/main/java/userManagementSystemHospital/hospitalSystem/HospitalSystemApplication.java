@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import userManagementSystemHospital.hospitalSystem.config.SecurityConfig;
 
-@EnableWebSecurity
+
 @SpringBootApplication
 public class HospitalSystemApplication {
 

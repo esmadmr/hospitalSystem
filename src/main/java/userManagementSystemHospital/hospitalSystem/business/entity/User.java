@@ -29,14 +29,17 @@ public class User {
     @DateTimeFormat
     private String registerDate;
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "userRole",
-//            joinColumns = @JoinColumn(
-//                    name = "id", referencedColumnName = "id"),
-//            inverseJoinColumns = @JoinColumn(
-//                    name = "userRole", referencedColumnName = "userRole"))
-//    private Collection<RoleType> roles;
+    @ManyToOne
+    @JoinTable(
+            name = "roleType",
+            joinColumns = @JoinColumn(
+                    name = "id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "name", referencedColumnName = "roleType"))
+    private Collection<RoleType> roles;
 
+    @ManyToOne
+    @JoinColumn(name = "name")
+    private Department department;
 
 }

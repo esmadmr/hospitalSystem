@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 //localhost:8080/api/patients/getall
 
-@Table(name = "Patient")
+@Table(name = "patient")
 @Data
 @AllArgsConstructor
 @Entity

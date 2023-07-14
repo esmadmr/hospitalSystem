@@ -9,7 +9,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Collection;
 
 @Entity
 @Data
@@ -22,9 +21,6 @@ public class RoleType {
     private String id;
     @Column(name = "roleType")
     private String roleType;
-    @Column(name = "userRole")
-    private String userRole;
-
 
 
 }

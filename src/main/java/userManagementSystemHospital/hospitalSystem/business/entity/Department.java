@@ -4,20 +4,24 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Table(name = "Policlinic")
+import java.util.Collection;
+
+@Table(name = "policlinic")
 @Data
 @AllArgsConstructor
 @Entity
-public class Policlinic {
+public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name="policlinicName")
-    private String policlinicName;
+    @Column(name="departmentType")
+    private String departmentType;
 
-    public Policlinic(){
+    public Department(){
 
     }
+    @OneToMany(mappedBy = "policlinic")
+    private Collection<User> users;
 
 }

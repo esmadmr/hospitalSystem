@@ -7,7 +7,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import userManagementSystemHospital.hospitalSystem.business.entity.role.RoleType;
 import userManagementSystemHospital.hospitalSystem.business.entity.role.UserRole;
 import userManagementSystemHospital.hospitalSystem.repository.UserRepository;
 
@@ -15,6 +14,7 @@ import java.util.*;
 
 @Data
 public class UserDetail implements UserDetails {
+    private int id;
     private String userName;
     private String password;
 
@@ -28,8 +28,6 @@ public class UserDetail implements UserDetails {
         return authorities;
     }
 
-
-    //burayı da sor return getauthorrities olması gerekmz mi
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -55,7 +53,6 @@ public class UserDetail implements UserDetails {
             throw new UsernameNotFoundException("Could not find user");
         }
 
-//BURAYI SOR ITERATION DAN EMIN DEĞİLM
         return null;
 
 //        return new User(

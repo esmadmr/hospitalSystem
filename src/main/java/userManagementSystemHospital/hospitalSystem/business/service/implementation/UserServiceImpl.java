@@ -2,15 +2,19 @@ package userManagementSystemHospital.hospitalSystem.business.service.implementat
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import userManagementSystemHospital.hospitalSystem.business.entity.Patient;
 import userManagementSystemHospital.hospitalSystem.business.entity.User;
+import userManagementSystemHospital.hospitalSystem.business.requests.CreateLoginRequest;
+import userManagementSystemHospital.hospitalSystem.business.responses.GetAllLoginResponses;
+import userManagementSystemHospital.hospitalSystem.business.responses.GetAllPatientsResponse;
 import userManagementSystemHospital.hospitalSystem.business.service.UserService;
 import userManagementSystemHospital.hospitalSystem.repository.UserRepository;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Service
 @Data
@@ -24,16 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public void login() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ad ve soyad: ");
-        String fullName = scanner.nextLine();
-        System.out.print("E-posta: ");
-        String email = scanner.nextLine();
-        System.out.print("Şifre: ");
-        String password = scanner.nextLine();
 
-        // Loglama işlemi
-        logUserDetails(fullName, email, password);
     }
 
     @Override
@@ -41,11 +36,11 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    public void logUserDetails(String fullName, String email, String password) {
+    public void logUserDetails(String name, String surname, String password) {
         // Burada loglama işlemleri gerçekleştirilir
         System.out.println("Kullanıcı girişi loglandı:");
-        System.out.println("Ad ve Soyad: " + fullName);
-        System.out.println("E-posta: " + email);
+        System.out.println("Ad: " + name);
+        System.out.println("Soyad: " + surname);
         System.out.println("Şifre: " + password);
     }
     @Override
@@ -56,6 +51,26 @@ public class UserServiceImpl implements UserService {
             throw new UsernameNotFoundException("Kullanıcı bulunamadı: " + username);
         }
         return user;
+    }
+
+    @Override
+    public List<GetAllLoginResponses> getAll() {
+        return null;
+    }
+
+    @Override
+    public void register(CreateLoginRequest createLoginRequest) {
+
+    }
+
+    @Override
+    public void login(CreateLoginRequest createLoginRequest) {
+
+    }
+
+    @Override
+    public void addUser(CreateLoginRequest createLoginRequest) {
+
     }
 }
 

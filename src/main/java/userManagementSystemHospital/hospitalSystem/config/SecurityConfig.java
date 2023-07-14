@@ -24,40 +24,22 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class SecurityConfig extends WebSecurityConfiguration {
 
     @Bean
-    //public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-
-        //return http
-          //      .authorizeHttpRequests((requests) -> requests
-            //            .requestMatchers("/**").permitAll()).build();
-
-        protected void configure(HttpSecurity http) throws Exception {
-            http
-                    .authorizeHttpRequests((authz) -> authz
-                            .anyRequest().authenticated()
-                    )
-                    .httpBasic(withDefaults());
-        }
-
-        //return http.build();
-
-//        return http.formLogin(form -> form
-//                        .loginPage("/login")
-//                        .permitAll()).build();
-
-//                .authorizeHttpRequests(requests -> requests
-//                        .requestMatchers("/").hasAnyRole("Secretary", "Doctor", "Nurse","Manager")
-//                        .anyRequest().authenticated()
-//                )
-//                .formLogin(form -> form
-//                        .loginPage("/login")
-//                        .permitAll()
-//                )
-//                .logout(logout -> logout
-//                        .permitAll());
-
-//        return http.build();
-   // }
-
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests(authorize -> authorize
+                        .anyRequest().authenticated()
+                )
+                .formLogin(withDefaults())
+                .httpBasic(withDefaults());
+        return http.build();
+    }
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests((authz) -> authz
+                        .anyRequest().authenticated()
+                )
+                .httpBasic(withDefaults());
+    }
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
