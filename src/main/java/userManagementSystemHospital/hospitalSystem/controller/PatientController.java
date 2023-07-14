@@ -6,7 +6,7 @@ import userManagementSystemHospital.hospitalSystem.business.service.PatientsServ
 import userManagementSystemHospital.hospitalSystem.business.requests.CreatePatientsRequest;
 import userManagementSystemHospital.hospitalSystem.business.responses.GetAllPatientsResponse;
 import java.util.List;
-
+//patientcontroller
 @RestController
 @RequestMapping("/api/patients")
 public class PatientController {

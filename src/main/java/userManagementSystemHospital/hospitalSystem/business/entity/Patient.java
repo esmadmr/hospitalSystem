@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 //localhost:8080/api/patients/getall
-
+//patient
 @Table(name = "patient")
 @Data
 @AllArgsConstructor

@@ -10,7 +10,7 @@ import userManagementSystemHospital.hospitalSystem.business.entity.Patient;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//patientserviceimpl
 @Service
 public class PatientServiceImpl implements PatientsService {
     private PatientsRepository patientsRepository;

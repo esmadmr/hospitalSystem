@@ -11,7 +11,7 @@ import userManagementSystemHospital.hospitalSystem.business.entity.role.UserRole
 import userManagementSystemHospital.hospitalSystem.repository.UserRepository;
 
 import java.util.*;
-
+//userDetails
 @Data
 public class UserDetail implements UserDetails {
     private int id;

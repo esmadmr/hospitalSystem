@@ -8,7 +8,7 @@ import userManagementSystemHospital.hospitalSystem.business.responses.GetAllLogi
 import userManagementSystemHospital.hospitalSystem.business.responses.GetAllPatientsResponse;
 
 import java.util.List;
-
+//userservice
 public interface UserService {
     void register();
 

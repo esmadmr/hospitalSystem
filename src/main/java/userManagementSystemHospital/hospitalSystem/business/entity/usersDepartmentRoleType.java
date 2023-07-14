@@ -8,7 +8,7 @@ import org.hibernate.annotations.NotFound;
 import userManagementSystemHospital.hospitalSystem.business.entity.role.RoleType;
 
 import java.util.List;
-
+//userDepartmentRoleType
 @Entity
 
 public class usersDepartmentRoleType {

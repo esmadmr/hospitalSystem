@@ -11,6 +11,7 @@ import java.util.Collection;
 @AllArgsConstructor
 @Entity
 public class Department {
+    //department
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
