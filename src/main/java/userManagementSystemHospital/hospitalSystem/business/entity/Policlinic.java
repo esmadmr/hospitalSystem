@@ -3,7 +3,7 @@ package userManagementSystemHospital.hospitalSystem.business.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-//policlinic
+//pol
 @Table(name = "Policlinic")
 @Data
 @AllArgsConstructor

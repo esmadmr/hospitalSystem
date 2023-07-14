@@ -3,7 +3,7 @@ package userManagementSystemHospital.hospitalSystem.business.entity.dto;
 import lombok.Data;
 
 import java.io.Serializable;
-
+//userdto
 @Data
 public class UserDTO implements Serializable {
     private String userName;

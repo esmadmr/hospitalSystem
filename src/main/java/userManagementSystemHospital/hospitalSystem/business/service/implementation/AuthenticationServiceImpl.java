@@ -6,7 +6,7 @@ import userManagementSystemHospital.hospitalSystem.business.entity.dto.UserDTO;
 import userManagementSystemHospital.hospitalSystem.business.service.AuthenticationService;
 import userManagementSystemHospital.hospitalSystem.repository.UserRepository;
 
-//authenticationserviceimpl
+//authentication serviceimpl
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
 //kimlik doğrulama servisi

@@ -13,7 +13,7 @@ import userManagementSystemHospital.hospitalSystem.business.service.implementati
 import userManagementSystemHospital.hospitalSystem.business.service.implementation.UserServiceImpl;
 
 import java.util.List;
-//usercontroller
+//user controller
 @RestController
 @RequestMapping("/api/users")
 public class UserController {

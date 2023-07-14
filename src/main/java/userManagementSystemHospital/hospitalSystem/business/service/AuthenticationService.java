@@ -1,7 +1,7 @@
 package userManagementSystemHospital.hospitalSystem.business.service;
 
 import userManagementSystemHospital.hospitalSystem.business.entity.dto.UserDTO;
-//authservice
+//auth service
 public interface AuthenticationService {
     public boolean authenticateUser(UserDTO userDTO);
 }

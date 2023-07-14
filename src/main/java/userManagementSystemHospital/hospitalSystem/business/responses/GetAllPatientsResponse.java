@@ -4,7 +4,7 @@ package userManagementSystemHospital.hospitalSystem.business.responses;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-//patientresponse
+//patient response
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

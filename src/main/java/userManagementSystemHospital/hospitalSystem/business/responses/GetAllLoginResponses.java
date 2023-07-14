@@ -3,7 +3,7 @@ package userManagementSystemHospital.hospitalSystem.business.responses;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-//login response
+//loginresponse
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

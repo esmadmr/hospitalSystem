@@ -17,7 +17,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 //yetkilendirme kurallarını belirlediğim class
-//config
+//configuration
 @Configuration
 @EnableWebSecurity
 @EnableJpaRepositories(basePackages = "userManagementSystemHospital.hospitalSystem.repository")

@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-//patientrequest
+//patient request
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

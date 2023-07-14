@@ -5,8 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.Collection;
-
-@Table(name = "policlinic")
+//department
+@Table(name = "department")
 @Data
 @AllArgsConstructor
 @Entity

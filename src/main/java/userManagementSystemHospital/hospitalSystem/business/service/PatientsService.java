@@ -4,7 +4,7 @@ import userManagementSystemHospital.hospitalSystem.business.requests.CreatePatie
 import userManagementSystemHospital.hospitalSystem.business.responses.GetAllPatientsResponse;
 
 import java.util.List;
-//patientsservice
+//patients service
 public interface PatientsService {
     List<GetAllPatientsResponse> getAll();
     void add(CreatePatientsRequest createPatientsRequest);

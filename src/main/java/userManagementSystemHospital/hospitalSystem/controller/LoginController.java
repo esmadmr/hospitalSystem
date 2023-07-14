@@ -10,7 +10,7 @@ import userManagementSystemHospital.hospitalSystem.business.entity.dto.UserDTO;
 import userManagementSystemHospital.hospitalSystem.business.service.implementation.AuthenticationServiceImpl;
 import userManagementSystemHospital.hospitalSystem.business.service.implementation.UserServiceImpl;
 import userManagementSystemHospital.hospitalSystem.business.requests.CreateLoginRequest;
-//logcontroller
+//log controller
 @RestController
 public class LoginController {
     private UserServiceImpl userServiceImpl;

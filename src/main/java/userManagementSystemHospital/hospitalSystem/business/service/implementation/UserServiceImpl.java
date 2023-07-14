@@ -15,7 +15,7 @@ import userManagementSystemHospital.hospitalSystem.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-//userserviceimpl
+//user serviceimpl
 @Service
 @Data
 public class UserServiceImpl implements UserService {

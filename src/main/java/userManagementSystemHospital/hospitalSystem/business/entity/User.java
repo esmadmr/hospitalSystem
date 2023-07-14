@@ -9,7 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import userManagementSystemHospital.hospitalSystem.business.entity.role.RoleType;
 
 import java.util.Collection;
-//user
+//users
 @Entity(name="users")
 @Data
 @NoArgsConstructor
