@@ -5,10 +5,12 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 import userManagementSystemHospital.hospitalSystem.business.entity.role.RoleType;
 
-import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 //users
 @Entity(name="users")
 @Data
@@ -17,7 +19,7 @@ import java.util.Collection;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     //users bir entity ve çoğul olmak zorunda
     private String name;
@@ -25,21 +27,37 @@ public class User {
     private String username;
     private String password;
     private String age;
+    private String email;
     private boolean enabled;
-    @DateTimeFormat
-    private String registerDate;
+    private Date registerDate;
 
-    @ManyToOne
-    @JoinTable(
-            name = "roleType",
-            joinColumns = @JoinColumn(
-                    name = "id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "name", referencedColumnName = "roleType"))
-    private Collection<RoleType> roles;
+    public User(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 
-    @ManyToOne
-    @JoinColumn(name = "name")
-    private Department department;
 
+//    @ManyToOne
+//    @JoinTable(
+//            name = "roleType",
+//            joinColumns = @JoinColumn(
+//                    name = "id", referencedColumnName = "id"),
+//            inverseJoinColumns = @JoinColumn(
+//                    name = "name", referencedColumnName = "roleType"))
+//    private Collection<RoleType> roles;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "name")
+//    private Department department;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(  name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_type_id"))
+    private Set<RoleType> roles = new HashSet<>();
+
+//    @JsonIgnore
+//    @OneToMany(mappedBy="user",fetch=FetchType.EAGER)
+//    private Set<Authority> authorities;
 }

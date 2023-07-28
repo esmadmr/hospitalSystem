@@ -12,9 +12,9 @@ import java.util.List;
 public interface UserService {
     void register();
 
-    void login();
+    void createUser(User user);
 
-    void addUser();
+    User findOne(Integer id);
 
     User loadUserByUsername(String userName);
 

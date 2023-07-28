@@ -27,13 +27,13 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    public void login() {
-
+    @Override
+    public void createUser(User user) {
+        userRepository.save(user);
     }
 
-    @Override
-    public void addUser() {
-
+    public User findOne(Integer userId) {
+        return userRepository.findById((long) userId).orElse(null);
     }
 
     public void logUserDetails(String name, String surname, String password) {
@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User loadUserByUsername(String username) throws UsernameNotFoundException {
         // Kullanıcıyı veritabanından bul ve döndürt
-        User user = (User) userRepository.findByUsername(username);
+        User user = userRepository.findByUsername(username).orElse(null);
         if (user == null) {
             throw new UsernameNotFoundException("Kullanıcı bulunamadı: " + username);
         }
@@ -55,7 +55,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<GetAllLoginResponses> getAll() {
-        return null;
+        GetAllLoginResponses getAllLoginResponses = new GetAllLoginResponses();
+        getAllLoginResponses.setName("Ramazan");
+        return List.of(getAllLoginResponses);
     }
 
     @Override

@@ -22,7 +22,7 @@ public class Department {
     public Department(){
 
     }
-    @OneToMany(mappedBy = "policlinic")
-    private Collection<User> users;
+//    @OneToMany(mappedBy = "policlinic")
+//    private Collection<User> users;
 
 }
